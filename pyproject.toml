@@ -47,6 +47,7 @@ classifiers = ["Development Status :: 3 - Alpha",
 [build-system]
 requires = ["setuptools>=42",
             "wheel",
-	    "versioneer"
+	    "versioneer",
+	    "Sphinx>=1.0"
 	    ]
 build-backend = "setuptools.build_meta"

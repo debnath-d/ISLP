@@ -51,14 +51,6 @@ info = read_vars_from(pjoin('ISLP', 'info.py'))
 # is missing.  Otherwise the monkeypatched Extension will change .pyx
 # filenames to .c filenames, and we probably don't have the .c files.
 sys.path.insert(0, pjoin(dirname(__file__), 'fake_pyrex'))
-# Set setuptools extra arguments
-extra_setuptools_args = dict(
-    tests_require=['nose'],
-    test_suite='nose.collector',
-    zip_safe=False,
-    extras_require = dict(
-        doc=['Sphinx>=1.0'],
-        test=['nose>=0.10.1']))
 
 # Define extensions
 EXTS = []
@@ -104,4 +96,4 @@ def main(**extra_args):
 #simple way to test what setup will do
 #python setup.py install --prefix=/tmp
 if __name__ == "__main__":
-    main(**extra_setuptools_args)
+    main()
